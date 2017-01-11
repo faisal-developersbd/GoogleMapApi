@@ -1,0 +1,3 @@
+# GoogleMapApi
+
+Screenshots are available in the master branch...
