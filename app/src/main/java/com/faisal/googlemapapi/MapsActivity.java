@@ -40,12 +40,36 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        LatLng sydney2 = new LatLng(-34, 160);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney").snippet("Population: 4,137,400")).showInfoWindow();
+        LatLng bubt = new LatLng(23.811805, 90.357025);
 
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Tapped Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+        LatLng loc = new LatLng(26.157195, 88.606423);
+        LatLng loc2 = new LatLng(24.920543, 88.733297);
+        LatLng loc3 = new LatLng(24.787454, 91.992941);
+        LatLng loc4 = new LatLng(24.659166, 90.752540);
+
+        mMap.addMarker(new MarkerOptions().position(bubt).title("1").snippet("First order from here")).showInfoWindow();
+
+
+
+        mMap.addMarker(new MarkerOptions().position(loc).title("3").snippet("Third order from here"));
+
+
+
+        mMap.addMarker(new MarkerOptions().position(loc2).title("2").snippet("Second order from here"));
+
+
+
+        mMap.addMarker(new MarkerOptions().position(loc3).title("5").snippet("Fifth order from here"));
+
+
+
+        mMap.addMarker(new MarkerOptions().position(loc4).title("4").snippet("Fourth order from here"));
+
+
+        mMap.setMinZoomPreference(6.0f);
+        mMap.setMaxZoomPreference(14.0f);
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(bubt));
         // Set a preference for minimum and maximum zoom.
 //        mMap.setMinZoomPreference(6.0f);
 //        mMap.setMaxZoomPreference(14.0f);
